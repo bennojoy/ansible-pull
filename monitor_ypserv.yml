@@ -1,5 +1,7 @@
 ---
 # Check if ypserv is running, if not start it and report
 
-- name: Check if ypserv is running else start it.
-  service: name=ypserv state=started
+- hosts: localhost
+  tasks:
+    - name: Check if ypserv is running else start it.
+      service: name=ypserv state=started
